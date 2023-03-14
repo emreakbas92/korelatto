@@ -106,7 +106,7 @@ async function checkPriceChange() {
           const percentChange = (priceChange * 100).toFixed(2);
           const message = `Price of ${symbol} changed by ${percentChange}% from ${previousPrices[symbol]} to ${currentPrice}`;
           console.log(message);
-          const channel = client.channels.cache.get('1085147831750377532'); // Replace CHANNEL_ID with the ID of the channel you want to send the message to
+          const channel = client.channels.cache.get('1085175510998458409'); // Replace CHANNEL_ID with the ID of the channel you want to send the message to
           if (channel) {
             channel.send(message);
           }
