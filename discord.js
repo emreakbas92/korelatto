@@ -102,7 +102,7 @@ async function checkPriceChange() {
     if (currentPrice !== null) {
       if (previousPrices[symbol] !== undefined) {
         const priceChange = (currentPrice - previousPrices[symbol]) / previousPrices[symbol];
-        if (Math.abs(priceChange) >= 0.01) {
+        if (Math.abs(priceChange) >= 0.0001) {
           const percentChange = (priceChange * 100).toFixed(2);
           const message = `Price of ${symbol} changed by ${percentChange}% from ${previousPrices[symbol]} to ${currentPrice}`;
           console.log(message);
@@ -117,6 +117,6 @@ async function checkPriceChange() {
   }
 }
 
-client.login('MTA4MDM3Njk3OTc3NTI5MTQwMg.GE4avC.M02Tm6-4NOLKrEFurgQX1Fwz6enYQdsC8u5dcE'); // Replace YOUR_BOT_TOKEN with your actual bot token
+client.login('MTA4MDM3Njk3OTc3NTI5MTQwMg.GBXeEs.BRXyWfH82WLalhGDiIsPyllTVppUviMi5_Dtd4'); // Replace YOUR_BOT_TOKEN with your actual bot token
 
 setInterval(checkPriceChange, timeInterval);
